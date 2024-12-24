@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import { PaperProvider, Text, Divider } from "react-native-paper";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <View style={styles.container}>
+        <Text variant="headlineLarge">Hello Chamodi</Text>
+        <Divider />
+        <Text variant="bodyMedium" style={styles.body} theme={{ colors: { primary: 'blue' } }}>
+          Video provides a powerful way to help you prove your point. When you
+          click Online Video, you can paste in the embed code for the video you
+          want to add. You can also type a keyword to search online for the
+          video that best fits your document. To make your document look
+          professionally produced, Word provides header, footer, cover page, and
+          text box designs that complement each other. For example, you can add
+          a cover page, a header, and a sidebar. You can also add a watermark to
+          a section of your document, page numbers, or date and time. Word helps
+          you organize and write your documents more efficiently. Customize your
+          document, letter, resume, or notes your way with robust tools that
+          enable you to accomplish your best writing with the best format
+          options and styles. Word gives you the capabilities to customize your
+          writing and design your document to meet your specific needs. Create
+          your document with your style and preference. Make your document look
+          professional and polished with different formatting options.
+        </Text>
+        <StatusBar style="auto" />
+      </View>
+    </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
+  body:{
+    padding: 20,
+    textAlign: "justify",
+  }
 });
